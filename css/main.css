@@ -1,0 +1,840 @@
+
+/*reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Cargar tipografías locales*/
+@font-face {
+    font-family: "Aeonik-Bold";
+    src: url(../fonts/Aeonik-Bold.otf) format("opentype");
+}
+
+@font-face {
+    font-family: "Aeonik-Light";
+    src: url(../fonts/Aeonik-Light.otf) format("opentype");
+}
+
+@font-face {
+    font-family: "TAN-Waverly";
+    src: url(../fonts/TAN\ -\ WAVERLY.otf) format("opentype");
+}
+
+/* Para el fondo negro*/
+body {
+    background-color: black;
+}
+
+/*Estilos para el menú*/
+header{
+    padding: 3.75rem 6.25rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav ul li{
+    display: inline-block;
+   
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-family: Aeonik-Bold;
+    margin: 1.25rem;
+    letter-spacing: 0.1em;
+}
+
+.menuMobile{
+    display: none;
+}
+
+.menuDesktop{
+    display: inline-block;
+}
+
+/*Grid index*/
+
+/*Versión index reto grid*/
+.contenedorGrid {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "contenedorPrincipal contenedorPrincipal contenedorPrincipal contenedorPrincipal"
+                         "contenedorLinks contenedorLinks contenedorLinks contenedorLinks"
+                         "contenedorSobreMi contenedorSobreMi imagenRetrato imagenRetrato"
+                         "contenedorTrabajos contenedorTrabajos contenedorTrabajos contenedorTrabajos";
+    gap: 1rem;      
+}
+
+/*Vínculos*/
+a{
+    color: #E5CC87;
+    font-family: Aeonik-Light;
+    font-size: 1.5rem;
+    text-decoration: none;
+    line-height: 1.9rem;
+}
+
+span {
+    vertical-align: middle;
+    border-bottom: solid 0.0625rem #E5CC87;
+}
+
+ol li{
+    list-style: none;
+    margin: 0.6rem;
+    align-self: center;
+}
+
+ol li a img {
+    vertical-align: middle;
+}
+
+ol {
+    display: flex;
+    margin: 1.25rem;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoImg {
+    width: 3.4rem;
+}
+
+/*Main*/
+
+.contenedorPrincipal {
+    display: flex;
+    flex-flow: row wrap;
+    background-image: url(../img/BG\ shape.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    grid-area: contenedorPrincipal;
+    /*horizontal*/
+    justify-self: center;
+    /*vertical*/
+    align-self: center;
+    height: 34rem;
+}
+
+.contenedorHijo{
+    text-align: center;
+    width: 60%;
+}
+.contenedorEstrella{
+    text-align: center;
+    display: inline-block;
+}
+
+
+
+/*Tipos de títulos*/
+
+h1 {
+    font-family: TAN-Waverly, Arial, Helvetica, sans-serif;
+    color: white;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+h2 {
+    font-family: Aeonik-Light, 'Times New Roman', Times, serif;
+    font-size: 1.9rem;
+    color: white;
+    text-align: center;
+}
+
+h3{
+    color: white;
+    font-size: 2rem;
+    font-family: TAN-Waverly, Arial, Helvetica, sans-serif;
+}
+
+/*Párrafo*/
+p {
+    color: white;
+    font-family: Aeonik-Light, 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+    line-height: 1.9rem;
+
+}
+
+.lineaAbajo{
+    border-bottom: solid 0.125rem white;
+    display: inline-block;
+    padding-bottom: 1.9rem;
+    margin-bottom: 1.9rem;
+    margin-top: 1.9rem;
+
+}
+
+.contenedorSobreMi{
+    margin: 1.9rem;
+    grid-area: contenedorSobreMi;
+     /*horizontal*/
+     justify-self: center;
+     /*vertical*/
+     align-self: center;
+     padding: 0 0 0 6.25rem;
+}
+
+.espacioTextoMi {
+    margin: .625rem 0 2rem 0;
+}
+
+
+
+.imagenRetrato {
+    width: 100%;
+    margin-left: 1.9rem;
+    grid-area: imagenRetrato;
+     /*horizontal*/
+     justify-self: center;
+     /*vertical*/
+     align-self: center;
+     padding: 0 6.25rem 0 0;
+}
+
+.tamImagen {
+    width: 100%;
+}
+
+.contenedorLinks{
+    margin-top: 1.9rem;
+    margin-bottom: 1.9rem;
+    grid-area: contenedorLinks;
+     /*horizontal*/
+     justify-self: center;
+     /*vertical*/
+     align-self: center;
+}
+
+.btnMas{
+    text-align: center;
+    border: 0.125rem solid white;
+    width: 15rem;
+    padding: 2.5rem 0rem;
+    border-radius: 6.25rem;
+    text-transform: uppercase;
+    margin: 2.5rem;
+}
+
+.linkBlanco{
+    color: white;
+}
+
+.contenedorTrabajos{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    grid-area: contenedorTrabajos; 
+}
+
+.contenedorGridTrabajos{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "trabajoUno trabajoDos"
+                         "trabajoTres trabajoCuatro";
+    justify-content: center;
+    justify-items: center;    
+}
+
+.trabajoUno {
+    grid-area: trabajoUno;
+    /*horizontal*/
+    justify-self: center;
+    /*vertical*/
+    align-self: center;
+    width: 100%;
+}
+.trabajoDos {
+    grid-area: trabajoDos;
+    /*horizontal*/
+    justify-self: center;
+    /*vertical*/
+    align-self: center;
+    width: 100%;
+}
+.trabajoTres {
+    grid-area: trabajoTres;
+    /*horizontal*/
+    justify-self: center;
+    /*vertical*/
+    align-self: center;
+    width: 100%;
+}
+.trabajoCuatro {
+    grid-area: trabajoCuatro;
+    /*horizontal*/
+    justify-self: center;
+    /*vertical*/
+    align-self: center;
+    width: 100%;
+}
+
+.tamImagenTrabajos{
+    width: 100%;
+}
+
+.estiloTituloTrabajos{
+    text-align: left;
+    margin-top: 1.9rem;
+    margin-bottom: 1.25rem;
+}
+
+.iconoRedes{
+    margin: 0.62rem;
+}
+
+.trabajoContenedor {
+   padding: 1.25rem;
+   width: 100%;
+}
+
+/*Estilo del footer*/
+
+footer {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 3.75rem;
+    background-image: url(../img/bgFooter.png);
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+.elementoFooter{
+    margin: 1.25rem;
+}
+
+.tipografiaBold {
+    font-family: Aeonik-Bold, 'Times New Roman', Times, serif;
+}
+
+.contenedorTrabajo{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 3.1rem 0rem;
+    border-top: 0.125rem solid white;
+    border-bottom: 0.125rem solid white;
+    
+}
+
+.espacioTitulo{
+    margin: 4.4rem 0rem;
+}
+
+.espacioTitulo2{
+    margin: 0 0 1.9rem 0;
+}
+
+.espacioTextoTrabajo{
+    margin-bottom: 1.25rem;
+}
+
+.noMarginTop{
+    border-top: none;
+}
+
+.fondoDiseño{
+    background-image: url(../img/bg-design.png);
+    background-position: top right;
+    background-repeat: no-repeat;
+  
+}
+.fondoDesarrollo{
+    background-image: url(../img/bg-desarrollo.png);
+    background-position: top right;
+    background-repeat: no-repeat;
+}
+
+.fondoUnity{
+    background-image: url(../img/bg-unity.png);
+    background-position: top right;
+    background-repeat: no-repeat;
+}
+
+.fondoContacto{
+    background-image: url(../img/bg-contact.png);
+    background-position: top right;
+    background-repeat: no-repeat;
+}
+
+.containerDiseño{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center ;
+    padding: 0rem 4.625rem;
+}
+
+.contenedorTextos{
+    padding: 3.125rem;
+}
+
+.alinearTextoIzq {
+    text-align: left;
+}
+
+.contenedorSeccion{
+    width: 40%;
+    margin: 7.5rem 10.625rem;
+}
+
+.contenedorEstrella2{
+    margin: 2.2rem 0;
+}
+
+legend{
+    text-align: left;
+    font-size: 1.9rem;
+    color: white;
+    font-family: Aeonik-Light, 'Times New Roman', Times, serif;
+    line-height: 2.4rem;
+}
+
+fieldset {
+    border: none;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+label{
+    text-align: left;
+    font-size: 1.9rem;
+    color: white;
+    font-family: Aeonik-Light, 'Times New Roman', Times, serif;
+    line-height: 2.4remx;
+}
+
+input {
+    text-align: left;
+    font-size: 1.9rem;
+    color: rgba(255, 255, 255, 1);
+    font-family: Aeonik-Light, 'Times New Roman', Times, serif;
+    line-height: 2.4rem;
+    background-color: rgba(0, 0, 0, 0) ;
+    border-color: rgba(0, 0, 0, 0);
+    padding-bottom: 1.9rem;
+    border-bottom: 0.125rem solid white;
+    width: 100%;
+  
+}
+
+select {
+
+    text-align: left;
+    font-size: 1.9rem;
+    color: rgba(255, 255, 255, 1);
+    font-family: Aeonik-Light, 'Times New Roman', Times, serif;
+    line-height: 2.4rem;
+    background-color: rgba(0, 0, 0, 0) ;
+    border-color: rgba(0, 0, 0, 0);
+    padding-bottom: 1.9rem;
+    border-bottom: 0.125rem solid white;
+    width: 100%;
+    
+}
+
+.espacioTextoContacto{
+    margin: 2.5rem 0;
+}
+
+form {
+    width: 100%;
+}
+
+.anchoFormulario {
+    width: 100%;
+}
+
+.inputCheck {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.btnEnviar{
+    text-align: center;
+    border: 0.125rem solid white;
+    width: 15rem;
+    padding:2.5rem 0;
+    border-radius: 6.25rem;
+    text-transform: uppercase;
+    margin: 0 0 2.5rem 0;
+    width: 12.5rem;
+    margin-bottom: 0;
+}
+
+.btnBorrar {
+    color: #E5CC87;
+    font-family: Aeonik-Light;
+    font-size: 1.5rem;
+    text-decoration: none;
+    line-height: 1.9rem;
+    border-bottom: solid 0.06rem #E5CC87;
+    width: 4.4rem;
+    padding-bottom: 0.62rem;
+}
+
+.contenedorBotones {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.tamImagenTrabajo{
+    width: 300px;
+}
+
+/*Versión de grid sección Unity para el reto semanal*/
+
+.gridSeccionUnity{
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "contenedorSeccionUnity contenedorSeccionUnity contenedorSeccionUnity contenedorSeccionUnity imagenAlien"
+                         "contenedorUnity contenedorUnity contenedorUnity contenedorUnity contenedorUnity";
+    gap: 1rem;      
+}
+
+.imagenAlien {
+    grid-area: imagenAlien;
+    padding: 7.5rem 10.625rem;
+}
+
+.contenedorUnity{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    grid-area: contenedorUnity;
+    width: 100%;
+    padding: 0rem 4.625rem;
+}
+
+.contenedorSeccionUnity{
+    grid-area: contenedorSeccionUnity;
+    padding: 7.5rem 10.625rem;
+}
+
+.seccionMobileTemp{
+    display: none;
+}
+
+
+/*Versiones de pantalla*/
+
+@media screen and (max-width: 1301px){
+
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+   
+    .menuMobile{
+        display: inline-block;
+       
+    }
+
+    .menuDesktop {
+        display: none;
+    }
+
+    .seccionMobileTemp{
+        display: grid;
+        gap: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 1024px){
+
+    a{
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    h3{
+        font-size: 1.7rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+    }
+
+    .btnMas{
+        width: 12rem;
+        padding: 2rem 0rem;
+        margin: 2rem;
+    }
+
+    .imagenRetrato {
+        padding: 0 3rem 0 0;
+        margin-left: 1rem;
+    }
+
+    header {
+        padding: 3.75rem 3rem;
+    }
+
+    .contenedorSobreMi{
+        padding: 0 0 0 3rem;
+        margin: 1rem;
+    }
+
+    .imagenAlien {
+        padding: 5.5rem 4.625rem;
+    }
+    
+    .contenedorSeccionUnity{
+        padding: 5.5rem 4.625rem;
+    }
+
+    .tamAlien {
+        width: 3.7rem;
+    }
+
+    .contenedorSeccion{
+        margin: 5.5rem 4.625rem;
+    }
+
+    .contenedorTextos {
+        padding: 3.125rem;
+    }
+
+    .containerDiseño{
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center ;
+        padding: 0rem 2.8rem;
+    }
+
+}
+@media screen and (max-width: 768px){
+    
+    a{
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    h3{
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    header {
+        padding: 3rem 2.8rem;
+    }
+
+    .imagenRetrato {
+        padding: 0 2.8rem 0 2.8rem;
+        margin-left: 0rem;
+    }
+
+    .contenedorSobreMi{
+        padding: 0 2.8rem 0 2.8rem;
+        margin: 0rem;
+    }
+
+    .btnMas{
+        width: 10rem;
+        padding: 1.5rem 0rem;
+        margin: 1.5rem;
+    }
+
+    .contenedorGrid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: "contenedorPrincipal contenedorPrincipal contenedorPrincipal contenedorPrincipal"
+                             "contenedorLinks contenedorLinks contenedorLinks contenedorLinks"
+                             "imagenRetrato imagenRetrato imagenRetrato imagenRetrato"
+                             "contenedorSobreMi contenedorSobreMi contenedorSobreMi contenedorSobreMi"
+                             "contenedorTrabajos contenedorTrabajos contenedorTrabajos contenedorTrabajos";
+    }
+
+    .contenedorPrincipal{
+        background-size: contain;
+        flex-flow: column wrap;
+        gap: 20px;
+        height: 20rem;
+    }
+
+    .contenedorHijo {
+        text-align: center;
+        width: 80%;
+    }
+
+    .contenedorEstrella {
+        display: none;
+    }
+
+    .contenidoSobreMi {
+            display: flex;
+            flex-flow: column wrap;
+            align-items: center;
+    }
+    .contenedorLink{
+       margin-right: auto;
+    }
+    .contenedorGridTrabajos{
+        grid-template-columns: 1fr;
+        grid-template-areas: "trabajoUno"
+                             "trabajoDos"
+                             "trabajoTres"
+                             "trabajoCuatro"; 
+                             
+        padding: 0 2.8rem 0 2.8rem;
+    }
+
+    footer {
+        padding: 2.8rem;
+    }
+
+    .logoImg {
+        width: 2.2rem;
+    }
+    .imagenAlien {
+        padding: 1rem 1rem;
+    }
+
+    .tamAlien {
+        width: 2.2rem;
+    }
+    
+    .contenedorSeccionUnity{
+        padding: 2.8rem 2.8rem;
+    }
+
+    .gridSeccionUnity{
+        display: grid;
+        justify-content: center;
+        justify-items: center;
+        grid-template-columns: 1fr;
+        grid-template-areas: "imagenAlien"
+                             "contenedorSeccionUnity"
+                             "contenedorUnity";
+        gap: 1rem;      
+    }
+
+    .espacioTitulo {
+        margin: 2.4rem 0rem;
+    }
+
+    .contenedorTrabajo{
+        flex-flow: column wrap;
+        padding: 1.8rem 1.8rem;
+        width: 100%;
+    }
+    .tamImagenTrabajo{
+        width: 100%;
+    }
+    .contenedorTextos{
+        margin-right: auto;
+        padding: 1.8rem 0 1.8rem 0;
+    }
+    .tamOjo{
+        width: 1.2rem;
+    }
+
+    nav ul li a {
+        margin: 0;
+    }
+
+    .contenedorUnity{
+        padding: 0rem 2.8rem;
+    }
+
+    .contenedorSeccion{
+        margin: 2.8rem 2.8rem;
+        width: 80%;
+    }
+
+    input{
+        font-size: 1.5rem;
+    }
+
+    legend {
+        font-size: 1.5rem;
+    }
+
+    select {
+        font-size: 1.5rem;
+    }
+    label {
+        font-size: 1.5rem;
+    }
+
+}
+@media screen and (max-width: 480px){
+   
+    header {
+        padding: 2.2rem 2rem;
+    }
+
+    .contenedorHijo {
+        text-align: center;
+        width: 95%;
+    }
+
+    .contenedorPrincipal {
+        height: 16rem;
+    }
+
+    .contenedorLinks{
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    footer {
+        padding: 2rem;
+    }
+
+    .btnEnviar{
+        width: 8.5rem;
+        padding: 1.5rem 0;
+    }
+    
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Link del css-->
+    <link rel="stylesheet" href="../css/main.css">
+    <title>Portafolio - Contacto</title>
+    
+</head>
+<body>
+         <!--Acá comienza el header del sitio con logo y links-->
+         <header>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="../index.html">
+                            <img class="logoImg" src="../img/Logo.svg" alt="Logo">
+                        </a>
+                    </li>
+                    <li class="menuDesktop">
+                        <a href="design.html">Diseño Gráfico</a>
+                    </li>
+                    <li class="menuDesktop">
+                        <a href="development.html">Desarrollo Web</a>
+                    </li>
+                    <li class="menuDesktop">
+                        <a href="unity.html">Unity y videojuegos</a>
+                    </li>
+                    <li class="menuDesktop">
+                        <a href="contact.html">Contáctame</a>
+                    </li>
+                    <li class="menuMobile">
+                        <img src="../img/iPhone 13/menu.svg" alt="icono del menu">
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!--Menu temporal mobile-->
+        <div class="contenedorLinks seccionMobileTemp">
+            <ol>
+                <li>
+                    <a href="design.html">
+                        <img src="../img/eye.png" alt="Icono ver">
+                        <span>Diseño Gráfico</span>
+                    </a>
+                </li>
+                <li>
+                <a href="development.html">
+                    <img src="../img/eye.png" alt="Icono ver">
+                    <span>Desarrollo Web</span>
+                </a>
+                </li>
+                <li>
+                    <a href="unity.html">
+                        <img src="../img/eye.png" alt="Icono ver">
+                        <span>Desarrollo en Unity</span>
+                    </a>
+                </li>
+            </ol>
+        </div>
+
+        <div class="fondoContacto">
+            <!--Sección principal contacto con formulario-->
+            <main>
+                <div class="contenedorSeccion">
+                    <h1 class="alinearTextoIzq espacioTitulo2">Contáctame</h1>
+                    <form action="">
+                        <fieldset>
+                            <legend class="espacioTitulo2">Escríbeme cualquier duda o consulta</legend>
+                            <div class="anchoFormulario">
+                                <input class="estiloForm" type="text" name="nombre" placeholder="Tu nombre">
+                            </div>
+                            <div class="anchoFormulario">
+                                <input type="email" name="mail" placeholder="Tu email">
+                            </div>
+                            <div class="anchoFormulario">
+                                <input class="estiloForm" type="text" name="mensaje" placeholder="Tu mensaje">
+                            </div>
+                            <div class="anchoFormulario">
+                                <select name="region" id="">
+                                    <option value="Latinoamerica">Tu región</option>
+                                    <option value="Norteamerica">América del Norte y Oceanía</option>
+                                    <option value="Europa">Europa</option>
+                                    <option value="Otra">Otra región</option>
+                                </select>
+                            </div>
+                            <div class="espacioTextoContacto">
+                                <label><input type="checkbox" value="checkbox1" class="inputCheck"> ¿Deseas recibir un newsletter con actualizaciones?</label>
+                            </div>
+                        
+                            <div class="contenedorBotones">
+                                <input type="submit" value="Envialo" class="btnEnviar">
+                                <input type="reset" value="Borrar" class="btnBorrar">
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </main>
+        </div>
+
+    <!--Footer de la web con contacto y redes sociales-->
+
+    <footer>
+        <div class="elementoFooter">
+             <!--Link a página de contacto-->
+        <a href="contact.html">
+            <h3>Contáctame</h3>
+        </a>
+        </div>
+        <div class="elementoFooter">
+            <!--Redes Sociales-->
+            <a href="mailto:andreinadesola@gmail.com">
+                <img class="iconoRedes" src="../img/mail.png" alt="Icono email">
+            </a>
+            <a href="https://www.instagram.com/andreinadesola" target="_blank">
+                <img class="iconoRedes" src="../img/ig.png" alt="Icono Instagram">
+            </a>
+            <a href="https://www.linkedin.com/in/andreina-de-sola/" target="_blank">
+                <img class="iconoRedes" src="../img/linkedin.png" alt="Icono Linkedin">
+             </a>
+        </div>
+        <div class="elementoFooter">
+            <!--Derechos reservados-->
+        <p>© ANDREINA DE SOLA - 2022</p>
+        </div>
+    </footer>
+    
+</body>
+</html>
